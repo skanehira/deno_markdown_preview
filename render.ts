@@ -29,6 +29,6 @@ const md = MarkdownIt({
   },
 }).use(csvToTable);
 
-export function render(src: string): string {
+export function renderMarkdown(src: string): string {
   return md.render(src);
 }

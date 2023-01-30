@@ -1,6 +1,6 @@
 import { Router } from "oak";
 import { Watcher } from "./watcher.ts";
-import { render } from "./render.ts";
+import { renderMarkdown } from "./render.ts";
 
 const HTML = `
 <html>
@@ -35,7 +35,7 @@ const router = new Router().get("/", (ctx) => {
   const ws = ctx.upgrade();
 
   ws.onopen = async () => {
-    const html = render(await Deno.readTextFile(file));
+    const html = renderMarkdown(await Deno.readTextFile(file));
     ws.send(html);
   };
 

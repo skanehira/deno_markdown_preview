@@ -1,4 +1,4 @@
-import { render } from "./render.ts";
+import { renderMarkdown } from "./render.ts";
 
 export class Watcher {
   #ws: WebSocket;
@@ -33,17 +33,16 @@ export class Watcher {
       };
     };
 
-    const shouldRender = renderer();
+    const render = renderer();
 
     for await (const event of watcher) {
       if (this.shouldClose()) {
         break;
       }
-      await shouldRender(async () => {
+      await render(async () => {
         const file = event.paths[0];
         const content = await Deno.readTextFile(file);
-
-        this.#ws.send(render(content));
+        this.#ws.send(renderMarkdown(content));
       });
     }
   }
