@@ -18,13 +18,14 @@ export class Watcher {
     console.log(`watching ${this.#file}...`);
     const watcher = Deno.watchFs(this.#file);
 
+    // エディタによるファイルへの書き込みでは
     // Deno.watchFs は複数イベントが発火するので
-    // レンダリング後は一定期間は(0.5秒)レンダリングを行わない
+    // レンダリング後は一定期間は(0.1秒)レンダリングを行わない
     const renderer = () => {
       let before = Date.now();
       return async (render: () => Promise<void>) => {
         const elasped = Date.now() - before;
-        if (elasped < 500) {
+        if (elasped < 100) {
           return;
         }
         console.log("rendering...");
