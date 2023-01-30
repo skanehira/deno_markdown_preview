@@ -4,6 +4,7 @@
 		"highlightjs": "npm:highlight.js@11.7.0",
 		"oak": "https://deno.land/x/oak@v11.1.0/mod.ts",
 		"make_table": "../deno_make_table/mod.ts",
-		"path": "https://deno.land/std@0.174.0/path/mod.ts"
+		"path": "https://deno.land/std@0.174.0/path/mod.ts",
+		"debounce": "https://deno.land/std@0.175.0/async/debounce.ts"
 	}
 }
