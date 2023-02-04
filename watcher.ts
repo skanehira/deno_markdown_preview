@@ -17,11 +17,9 @@ export class Watcher {
 
   async watch() {
     console.log(`watching ${this.#file}...`);
-    // エディタによるファイルへの書き込みでは、
-    // Deno.watchFs は複数イベントが発火するので、
-    // レンダリング後は一定期間は(0.1秒)レンダリングを行わない
+    // エディタでファイルを更新すると複数のイベントが発生するため、
+    // レンダリング後は一定期間は(0.2秒)レンダリングを行わない
     const render = debounce((ws: WebSocket, content: string) => {
-      console.log("redering...");
       ws.send(renderMarkdown(content));
     }, 200);
 
