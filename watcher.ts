@@ -10,7 +10,7 @@ export class Watcher {
     this.#file = file;
   }
 
-  shouldClose(): boolean {
+  shouldStop(): boolean {
     const state = this.#ws.readyState;
     return WebSocket.CLOSED === state || WebSocket.CLOSING === state;
   }
@@ -25,7 +25,7 @@ export class Watcher {
 
     const watcher = Deno.watchFs(this.#file);
     for await (const event of watcher) {
-      if (this.shouldClose()) {
+      if (this.shouldStop()) {
         break;
       }
 
