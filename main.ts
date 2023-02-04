@@ -5,16 +5,16 @@ const port = 9000;
 console.log(`Listening localhost: ${port}`);
 
 const app = new Application();
-app.use(async (ctx, next) => {
+
+app.use(router.routes());
+app.use(async (ctx, _) => {
   try {
     await ctx.send({
       root: Deno.cwd(),
-      index: "/",
     });
   } catch {
-    await next();
+    // do nothing
   }
 });
-app.use(router.routes());
 
 await app.listen({ port });
