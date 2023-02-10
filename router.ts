@@ -24,7 +24,7 @@ const HTML = `
 `;
 
 const router = new Router().get("/", (ctx) => {
-  ctx.response.headers.set("Content-Type", "text/html");
+  ctx.response.headers.set("Content-Type", "text/html; charset=UTF-8");
   ctx.response.body = HTML;
 }).get("/wss", (ctx) => {
   if (!ctx.isUpgradable) {
