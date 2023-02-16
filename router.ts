@@ -14,7 +14,7 @@ const HTML = `
     </div>
   </body>
 	<script type="text/javascript">
-		const socket = new WebSocket("ws://localhost:9000/wss");
+		const socket = new WebSocket("ws://localhost:9000/ws");
 
 		socket.addEventListener("message", (ev) => {
 			document.getElementById("body").innerHTML = ev.data;
@@ -26,7 +26,7 @@ const HTML = `
 const router = new Router().get("/", (ctx) => {
   ctx.response.headers.set("Content-Type", "text/html; charset=UTF-8");
   ctx.response.body = HTML;
-}).get("/wss", (ctx) => {
+}).get("/ws", (ctx) => {
   if (!ctx.isUpgradable) {
     ctx.throw(501, "cannot upgrade to a websocket");
   }
