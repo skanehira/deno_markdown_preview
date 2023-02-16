@@ -107,7 +107,10 @@
     "https://deno.land/x/oak@v11.1.0/testing.ts": "7612656efd2975f7a2e6848609f5971922dbec46b76372c5c623202fdd7b9a85",
     "https://deno.land/x/oak@v11.1.0/types.d.ts": "41951a18c3bfdb11e40707cab75da078ba8a4907cd7d4e11d8536bc2db0dde05",
     "https://deno.land/x/oak@v11.1.0/util.ts": "3af8c4ed04c6cc2bedbe66e562a77fc59c72df31c55a902a63885861ca1639d6",
-    "https://deno.land/x/path_to_regexp@v6.2.1/index.ts": "894060567837bae8fc9c5cbd4d0a05e9024672083d5883b525c031eea940e556"
+    "https://deno.land/x/path_to_regexp@v6.2.1/index.ts": "894060567837bae8fc9c5cbd4d0a05e9024672083d5883b525c031eea940e556",
+    "https://raw.githubusercontent.com/skanehira/deno_make_table/main/deps.ts": "5695bf912e46a2bd7f676c099ca6e18bead528bb8a054e3bea0c6922a8ff1c9c",
+    "https://raw.githubusercontent.com/skanehira/deno_make_table/main/mod.ts": "fa9d41405849a9218ead72aa3eed014f573a93ea03235b2e879f049cc42079cd",
+    "https://raw.githubusercontent.com/skanehira/deno_make_table/main/table.ts": "385b7fe9522fe6bd9a2f527e15bd9993ca01c74e48df9fb14d1c6cfbb92c3f6a"
   },
   "npm": {
     "specifiers": {
