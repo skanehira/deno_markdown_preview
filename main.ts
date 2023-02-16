@@ -13,7 +13,7 @@ app.use(async (ctx, _) => {
       root: Deno.cwd(),
     });
   } catch {
-    // do nothing
+    // 何もしない
   }
 });
 

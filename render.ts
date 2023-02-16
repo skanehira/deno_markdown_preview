@@ -22,7 +22,7 @@ const md = MarkdownIt({
       try {
         return hljs.highlight(str, { language: lang }).value;
       } catch (_) {
-        // do nothing
+        // 何もしない
       }
     }
     return "";
