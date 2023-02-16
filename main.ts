@@ -2,7 +2,7 @@ import { Application } from "oak";
 import { router } from "./router.ts";
 
 const port = 9000;
-console.log(`Listening localhost: ${port}`);
+console.log(`Setting up the server on localhost:${port}`);
 
 const app = new Application();
 
