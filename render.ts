@@ -1,7 +1,4 @@
-// @deno-types="npm:@types/markdown-it"
-import { default as MarkdownIt } from "markdown-it";
-import { default as hljs } from "highlightjs";
-import { makeTable } from "make_table";
+import { hljs, makeTable, MarkdownIt } from "./deps.ts";
 
 function csvToTable(md: MarkdownIt) {
   const defaultFence = md.renderer.rules.fence!;

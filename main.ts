@@ -1,4 +1,4 @@
-import { Application } from "oak";
+import { Application } from "./deps.ts";
 import { router } from "./router.ts";
 
 const port = 9000;

@@ -1,5 +1,5 @@
 import { renderMarkdown } from "./render.ts";
-import { debounce } from "debounce";
+import { debounce } from "./deps.ts";
 
 export class Watcher {
   #ws: WebSocket;

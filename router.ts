@@ -1,4 +1,4 @@
-import { Router } from "oak";
+import { Router } from "./deps.ts";
 import { Watcher } from "./watcher.ts";
 import { renderMarkdown } from "./render.ts";
 
